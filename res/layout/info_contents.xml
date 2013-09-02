@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+    
+    <TextView
+      android:id="@+id/name"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:ellipsize="end"
+      android:singleLine="true"
+      android:textColor="#000000"
+      android:textSize="15sp"
+      android:textStyle="bold"
+      android:textIsSelectable="true" />
+    
+    <TextView
+      android:id="@+id/address1"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:textColor="#5f5f5f"
+      android:textSize="14sp" 
+      android:textIsSelectable="true" />
+    
+    <TextView
+      android:id="@+id/address2"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:textColor="#5f5f5f"
+      android:textSize="14sp" 
+      android:textIsSelectable="true" />
+    
+    <TextView
+      android:id="@+id/city_and_zip"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:textColor="#5f5f5f"
+      android:textSize="14sp" 
+      android:textIsSelectable="true" />
+    
+    <TextView
+      android:id="@+id/country"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:textColor="#5f5f5f"
+      android:textSize="14sp" 
+      android:textIsSelectable="true" />
+    
+    <TextView
+      android:id="@+id/location"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:textColor="#5f5f5f"
+      android:textSize="14sp" 
+      android:textIsSelectable="true" />
+
+</LinearLayout>

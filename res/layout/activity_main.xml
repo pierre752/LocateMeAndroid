@@ -1,0 +1,94 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:baselineAligned="false"
+    android:orientation="vertical"
+    tools:context=".MainActivity" >
+    
+    <ScrollView 
+        android:id="@+id/save_address_form_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="2"
+        android:visibility="gone">
+        
+	    <fragment android:id="@+id/save_address_form"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:name="com.pierre.mylocator.SaveAddressFragment"/>
+	    
+    </ScrollView>
+    
+    <RelativeLayout
+        android:id="@+id/map_container"
+	    android:layout_width="match_parent"
+	    android:layout_height="match_parent"
+	    android:layout_weight="3" >
+	
+	    <fragment android:id="@+id/map"
+	        android:layout_width="match_parent"
+	        android:layout_height="match_parent"
+	        android:name="com.google.android.gms.maps.SupportMapFragment"/>
+	
+	    <Button
+	        android:id="@+id/button_add_address"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:minWidth="100dp"
+	        android:paddingLeft="2dp"
+	        android:paddingRight="2dp"
+	        android:layout_alignParentBottom="true"
+	        android:layout_alignParentLeft="true"
+	        android:textColor="#f00"
+	        android:text="@string/button_add_address" />
+	
+	    <ImageView
+	        android:id="@+id/imageView_marker"
+	        android:layout_width="22dp"
+	        android:layout_height="wrap_content"
+	        android:layout_centerHorizontal="true"
+	        android:layout_centerVertical="true"
+	        android:contentDescription="@string/content_description_default"
+	        android:src="@drawable/marker_bottom_align" />
+
+	    <ProgressBar
+	        android:id="@+id/progressBar"
+	        style="?android:attr/progressBarStyleLarge"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_centerHorizontal="true"
+	        android:layout_centerVertical="true"
+	        android:visibility="gone" />
+	
+	</RelativeLayout>
+	
+    <LinearLayout
+        android:id="@+id/save_address_buttons_container"
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:orientation="horizontal" 
+	    android:visibility="gone">
+
+        <Button
+            android:id="@+id/button_cancel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+			android:paddingLeft="2dp"
+	        android:paddingRight="2dp"
+            android:text="@string/save_address_cancel" />
+
+        <Button
+            android:id="@+id/button_save"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:paddingLeft="2dp"
+	        android:paddingRight="2dp"
+            android:text="@string/save_address_save" />
+        
+	</LinearLayout>
+        
+</LinearLayout>
